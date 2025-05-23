@@ -10,14 +10,16 @@ Această aplicație web este concepută pentru a gestiona colecția de cărți d
 Oamenii care citesc frecvent se confruntă adesea cu dificultăți în a-și gestiona colecția de cărți, inclusiv titlurile citite sau cele pe care doresc să le citească. Fără un sistem organizat, este ușor să achiziționezi duplicate sau să uiți anumite titluri. Această aplicație abordează aceste probleme, oferind un sistem de management simplu și eficient.
 Am utilizat două servicii în cloud, respectiv MongoDB și Vercel. 
 Am ales MongoDB pentru a stoca datele aplicației mele sub formă de json. Astfel, sunt salvate toate cărțile introduse în aplicația mea.
+![image](https://github.com/user-attachments/assets/6f02f6db-41a4-4f10-946a-d94cbb0356c5)
+
 Vercel realizează hosting pentru aplicația web. Permite un deploy rapid și se sincronizează cu Github, actualizând aplicația automat.
-3.	Descriere API
+4.	Descriere API
 Aplicația folosește un API REST pentru gestionarea resurselor de tip “carte”. Acest API servește ca punct de comunicare între interfața client și baza de date. Fiecare operațiune se realizează printr-un apel HTTP către un endpoint specific, care manipulează datele în format JSON. 
 -Listare cărți: acest endpoint returnează toate înregistrările din baza de date sub formă de listă de obiecte; este util pentru afișarea cărților într-un tabel sau într-o grilă de carduri în interfața vizuală. 
 -Adăugare carte: se primește un obiect JSON ce conține detaliile cărții (titlu, autor, status); creează un nou document în colecția de cărți și returnează cartea adăugată, împreună cu un Id unic. 
 -Editare carte: permite actualizarea informațiilor unei cărți existente, identificată prin Id; datele actualizate sunt transmise tot sub formă de JSON, iar răspunsul confirmă succesul actualizării.
 -Ștergere carte: acest endpoint elimină o carte specifică din baza de date, identificată prin Id; se confirmă realizarea operației, nu returnează un obiect.
-4.	Flux de date
+5.	Flux de date
 •	Exemple de request/response 
 Prin „get” am primit toate cărțile din bibliotecă alături de Id-ul lor:
  ![image](https://github.com/user-attachments/assets/6b2253a7-1018-4991-b729-e98e36039a23)
